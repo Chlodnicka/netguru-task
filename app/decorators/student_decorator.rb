@@ -4,10 +4,13 @@ class StudentDecorator < BaseDecorator
   end
 
   def avg_notes(subject_item)
-  #  if subject_item.subject_item_notes.nil?
-   #   0.00
-    #else
-     # subject_item.subject_item_notes.inject{ |sum, el| sum + el }.to_f / subject_item.subject_item_notes.size
-    #end
+    number = student.subject_item_notes.where(subject_item_id: subject_item.id).size
+    sum = student.subject_item_notes.where(subject_item_id: subject_item.id).map { |x| x[:value] }.reduce(:+)
+
+    if number == 0
+      "0.00"
+    else
+      sprintf('%.2f', sum/number.to_f)
+    end
   end
 end
