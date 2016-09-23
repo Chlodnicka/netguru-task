@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get 'reports/index', to: 'reports#subjects', as: 'report_subjects'
 
+  get 'visitors/index', to: 'visitors#index', as: 'visitors'
+
   root to: 'home#index'
 
 end
