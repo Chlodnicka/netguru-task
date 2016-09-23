@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   #end
 
   get 'reports/index', to: 'reports#subjects', as: 'report_subjects'
-  
+
   root to: 'home#index'
 
 end
