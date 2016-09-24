@@ -9,9 +9,7 @@ Rails.application.routes.draw do
     get :subjects
   end
 
-  #resources :reports do
-   # get :subjects
-  #end
+  resources :payments
 
   get 'reports/index', to: 'reports#subjects', as: 'report_subjects'
 
