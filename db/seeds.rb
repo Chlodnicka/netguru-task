@@ -24,7 +24,6 @@ end
     last_name: Faker::Name.last_name
   )
 end
-
 students = Student.all
 SubjectItem.all.each do |subject_item|
   subject_item.students << students.sample(rand(1..4))
@@ -37,6 +36,19 @@ SubjectItem.all.each do |subject_item|
                                                                 subject_item: subject_item,
                                                                 value: rand(1..6))
     end
+  end
+end
+
+Student.all.each do |student|
+  n=0
+  rand(6..9).times do
+    n+=1
+    Payment.create!(
+        payment_date: Date.new(2016,n,rand(1..28)),
+        amount: 200.00,
+        student_id: student.id,
+        status: "paid"
+    )
   end
 end
 

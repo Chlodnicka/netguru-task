@@ -7,6 +7,10 @@ crumb :student do |student|
   parent :students
 end
 
+crumb :payments do
+  link "Payments", payments_path
+end
+
 crumb :students do
   link "Students", students_path
 end

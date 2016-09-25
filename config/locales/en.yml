@@ -3,6 +3,7 @@ en:
     students: Students
     teachers: Teachers
     reports: Reports
+    payments: Payments
     reports_subjects: Subjects
     logout: Logout
     signin: Sign in
