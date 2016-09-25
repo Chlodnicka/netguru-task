@@ -2,7 +2,8 @@ rvm:
   - 2.2.3
 before_script:
   - psql -c "CREATE USER workshops WITH PASSWORD 'workshops';" -U postgres
-  - cp config/database.yml.sample config/database.yml
   - psql -c 'create database workshops_test;' -U workshops
+  - cp config/database.yml.sample config/database.yml
+
 addons:
   postgresql: '9.3'
