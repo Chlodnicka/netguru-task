@@ -1,3 +1,5 @@
+https://travis-ci.org/Chlodnicka/netguru-task.svg?branch=master
+
 RoR Workshops
 ================
 
